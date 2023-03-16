@@ -9,6 +9,10 @@ public class Product {
     private double price;
     private int category_id;
 
+    private String category_name;
+
+    public Product() {
+    }
 
     //create
     public Product(String name, String description, double price, int category_id) {
@@ -18,13 +22,14 @@ public class Product {
         setCategory_id(category_id);
     }
 
-    //put
-    public Product(int id, String name, String description, double price, int category_id) {
+    //put and get
+    public Product(int id, String name, String description, double price, int category_id, String category_name) {
         setId(id);
         setName(name);
         setDescription(description);
         setPrice(price);
-        setPrice(category_id);
+        setCategory_id(category_id);
+        setCategory_name(category_name);
     }
 
     public int getId() {
@@ -65,5 +70,13 @@ public class Product {
 
     public void setCategory_id(int category_id) {
         this.category_id = category_id;
+    }
+
+    public String getCategory_name() {
+        return category_name;
+    }
+
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
     }
 }

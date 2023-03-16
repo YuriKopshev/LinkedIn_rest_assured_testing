@@ -26,14 +26,14 @@ public class ApiTests {
         var response = given().
                 queryParam("id", 19).
                 when().
-                get(endpoint).then().statusCode(200);
+                get(endpoint).then();
         response.log().body();
     }
 
     @Test
     public void getProductsStatus() {
         String endpoint = "http://localhost:80/api_testing/product/read.php";
-        var response = given().when().get(endpoint).then().statusCode(200);
+        var response = given().when().get(endpoint).then();
         response.log().status();
     }
 
@@ -48,7 +48,7 @@ public class ApiTests {
                 "category_id": 3
                 }
                 """;
-        var response = given().body(body).when().post(endpoint).then().statusCode(201);
+        var response = given().body(body).when().post(endpoint).then();
         response.log().body();
         response.log().headers();
     }

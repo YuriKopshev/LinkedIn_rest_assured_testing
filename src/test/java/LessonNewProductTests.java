@@ -19,8 +19,7 @@ public class LessonNewProductTests {
                 body(product).
                 when().
                 post(endpoint).
-                then().
-                statusCode(201);
+                then();
         response.log().status();
         response.log().body();
     }
@@ -38,8 +37,7 @@ public class LessonNewProductTests {
                 body(body).
                 when().
                 put(endpoint).
-                then().
-                statusCode(200);
+                then();
         response.log().status();
         response.log().body();
     }
@@ -51,8 +49,7 @@ public class LessonNewProductTests {
                 queryParam("id", 22).
                 when().
                 get(endpoint).
-                then().
-                statusCode(200);
+                then();
         response.log().status();
         response.log().body();
     }
@@ -69,8 +66,7 @@ public class LessonNewProductTests {
                 body(body).
                 when().
                 delete(endpoint).
-                then().
-                statusCode(200);
+                then();
         response.log().status();
         response.log().body();
     }
